@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ART</title>
+        <meta name="description" content="Application">
+        <link rel="stylesheet" href="estilo.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+    </head>
+    <body id="body">
+        <div id="result" class="voicetotext"></div>
+        <div id="paleta"></div>
+        <div id="boton"><img id="flecha" src="imagenes/flecha-correcta.png"></div>
+        <div id="oculto">
+            <div id="panel">
+                            <ul id="cuerpo_panel" style="list-style-type:none" >
+                                <p>
+                                <select id="herramientas">
+                                <option selected="selected">P</option>
+                                </select>
+                                </p>
+                                <li>
+                                    <button id="anchoPinzel"><img id="anchura" src="imagenes/anchura.png"></button>
+                                </li>
+                                <li>
+                                    <input id="color" name="color" type="color" value='#000'>
+                                </li>
+                                <li>
+                                     <input id="bg_color" name="bg_color" type="color" value='#fff'>
+                                </li>
+                                <li>
+                                    <button id="jpeg"><img id="descarga"src="imagenes/flecha-hacia-abajo.png"></button>
+                                </li>
+                                <li>
+                                    <button id="borrar"><img id="borrador"src="imagenes/goma-de-borrar.png"></button>
+                                </li>
+                                <li>
+                                    <button id="micro" onclick="startConverting();"><img id="audio"src="imagenes/microphone.png"> </button>
+                                </li>
+                            </ul>
+                </div>
+                <canvas id="canvas"></canvas>
+
+
+                <div id="boton_cruz"><img id="cruz" src="imagenes/cancelar.png"></div>
+                <div id="panel2">
+                    <ul style="list-style-type:none" >
+                        <li>
+                             <span id="n_range">5</span>
+                                <p>
+                                    <input type="range" id="rr" min="1" max="100" value="10">
+                                </p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="c"></div>
+                <div id="bg_c"></div>
+         </div>
+      
+
+
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script> 
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+        <script src="microfono.js"></script>
+</body>
+</html>
